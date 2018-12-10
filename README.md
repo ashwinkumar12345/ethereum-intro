@@ -33,7 +33,7 @@ Interfacing with Ethereum
 - For Developers: web3.js
 - For Consumers: Metamask or Mist Browser
 
-MetaMask Setup
+Metamask Setup
 --------------
 
 - Go to Chrome Webstore and install the Metmask plugin
