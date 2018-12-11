@@ -127,9 +127,9 @@ Smart Contract
 --------------
  
  - Is an account controlled by code:
-  - balance - Amount of ether this account holds
-  - storage - Data store for this account
-  - code - Raw machine byte code for this contract
+   - balance - Amount of ether this account holds
+   - storage - Data store for this account
+   - code - Raw machine byte code for this contract
   
 Deploying a Smart Contract to Ethereum
 --------------------------------------
