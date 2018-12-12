@@ -192,8 +192,20 @@ Dec, 2013 Ethereum Whitepaper
  
 #### Wei v/s Ether
 
-  
+  - Smallest unit of currency
+  - 1 Eth = 1,000,000,000,000,000,000 Wei
+  - No fractional unit of Wei
 
+#### Gas and Transactions
+
+ - Different operations have different gas costs
+ - gasPrice - Amount of Wei per unit of gas
+ - startGas - Total amount of Wei you are willing to spend (safety net)
+ 
+#### Menomonic Phrase
+
+ - 12-word phrase that allows you to generate the pub and priv key
+ - 12-word menomonic -> BIP39 Algo -> Account address (Pub key and Priv key)
 
 
 
