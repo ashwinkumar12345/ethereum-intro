@@ -46,8 +46,8 @@ Dec, 2013 Ethereum Whitepaper
 
 - Your account consists of your account address, your public key, and your private key
 - Account address is like your email address
-- Public and Private keys together form your password
-- These are hex numbers, once converted to base10 => x 10^79 (incomprehensibly large, cannot be guessed)
+- Public and private keys together form your password
+- These are hex numbers, once converted to base10 => 8 x 10^79 (incomprehensibly large, cannot be guessed)
 
 #### Getting 'free' ether on Rinkeby
 
@@ -72,14 +72,14 @@ Dec, 2013 Ethereum Whitepaper
 #### Reason for the 15 sec delay for transaction to complete
 
 - The transaction object is sent to one node on the Ethereum N/W
-- The node combines all transaction received at the same time into a list
+- The node combines all transactions received at the same time into a list
 - The node then runs some 'validation logic' (mining) which causes the delay
 
 #### Block
 
 - Data is represented by a Hash
-- Hash in a digital fingerprint of the data
-- It's calculated by the proof-of-work alogorithm
+- Hash is a digital fingerprint of the data
+- It's calculated by the proof-of-work algorithm
 - Block consists of:
   - Block Number
   - Nonce
@@ -90,10 +90,10 @@ Dec, 2013 Ethereum Whitepaper
   
 #### Blockchain
   
-- Series of blocks connected in series
-- Previous hash is the hash of the previous block
+- Series of blocks, each connected to the previous
+- "Previous hash" is the hash of the previous block
 - If you need to change the data in one block, you would have to mine all subsequent blocks
-- That's how a blockchain resists change
+- This is how a blockchain resists change
 
 #### Distributed Blockchain
 
@@ -104,7 +104,7 @@ Dec, 2013 Ethereum Whitepaper
 #### Blocktime
 
 - You're looking for a hash less than some number, for example, 1000
-- Data + Nonce = Hash -> Base10 is this < 1000 if no decrease 1000 to maintain blocktime at 15s
+- Data + Nonce = Hash -> Base10 is this < 1000, if no, decrease 1000 to maintain blocktime at 15s
 - We need to vary 1000 because the number of nodes in the blockchain is always in flux
 
 #### Smart Contract
@@ -117,7 +117,7 @@ Dec, 2013 Ethereum Whitepaper
 #### Deploying a Smart Contract to Ethereum
 
 - Contract source is written on your laptop
-- The contract is deployed as a 'contract instance' to the Ethereum N/W
+- This contract is deployed as a 'contract instance' to the Ethereum N/W
 
 #### Solidity Programming Language
 
@@ -127,13 +127,14 @@ Dec, 2013 Ethereum Whitepaper
 
 #### Solidity Compiler
 
-- A contract is compiled by the Solidity compiler into Bytecode and ABI
+- A contract is compiled by the Solidity compiler into Bytecode and ABI (application binary interface)
 - Bytecode is deployed into Ethereum 
-- ABI is used for interfacing with a front end application
+- ABI is used for interfacing with a front-end application
 
 #### Remix
 
-- Browser code editor used for test smart contracts
+- Browser code editor used for testing smart contracts
+- A sample contract is as follows:
 
       pragma solidity ^0.4.17
       
@@ -170,29 +171,30 @@ Dec, 2013 Ethereum Whitepaper
 #### Testing with Remix
 
 - Remix hosts an Ethereum N/W to simulate running the contract
-- Create (string initialMessage)
-- Once created, message, setMessage (string setMessage)
+- Click "Create (string initialMessage)", after adding any initial message 
+- Once created, click message to retrieve that initial message 
+- Click "setMessage (string setMessage)", after adding a new message
+- Once created, click message to retrieve the new message
 
 #### Behind the scenes deployment
 
-- The contract creates a transaction obj with the following info:
- - nonce - How many times a sender has sent a transction'
- - to - This always blank for a contract
+- The contract creates a transaction object with the following info:
+ - nonce - Number of times a sender has sent a transction
+ - to - Always blank for a contract
  - data - Bytecode
  - gasPrice - Amount of ether per transaction
  - startGas - Units of Gas
- - v, r, s - Cryptographic elements - Creates Pub and Priv key from Acc address
- - The reverse is not possible
+ - v, r, s - Cryptographic elements - Creates public and private keys from your Account address, the reverse is not possible
  
  #### More on Functions
  
- - Whenever we want to modify any data on the N/W, a trans obj is sent, which needs to be approved (mining)
+ - Whenever we want to modify any data on the N/W, a trans object is sent, which needs to be approved (mining)
  - Calling a function - Get operation, free, instantaneous
  - Sending a transction to a function - Modify operation, costs ether, slow
  
 #### Wei v/s Ether
 
-  - Smallest unit of currency
+  - Wei is the smallest unit of currency
   - 1 Eth = 1,000,000,000,000,000,000 Wei
   - No fractional unit of Wei
 
