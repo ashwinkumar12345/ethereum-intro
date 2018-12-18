@@ -8,12 +8,6 @@
 Introduction
 =============
 
-### [Custom containers](https://github.com/markdown-it/markdown-it-container)
-
-::: warning
-*here be dragons*
-:::
-
 #### History 
 ---
 Oct 31st, 2008 Bitcoin Whitepaper
