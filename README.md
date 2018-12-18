@@ -15,16 +15,7 @@ Introduction
 > Dec, 2013 Ethereum Whitepaper
 "Ethereum: The Ultimate Smart Contract and Decentralized Application Platform"
 
-#### History 
----
-> Oct 31st, 2008 Bitcoin Whitepaper
-"Bitcoin: A Peer-to-Peer Electronic Cash System"
-
-> Dec, 2013 Ethereum Whitepaper
-"Ethereum: The Ultimate Smart Contract and Decentralized Application Platform"
-
-#### What's Ethereum?
----
+> ## What's Ethereum?
 
 - N/W of nodes
 - It's used to transfer money and store data
