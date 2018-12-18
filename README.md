@@ -10,7 +10,7 @@ Introduction
 
 #### History 
 ---
-- Oct 31st, 2008 Bitcoin Whitepaper
+> Oct 31st, 2008 Bitcoin Whitepaper
 "Bitcoin: A Peer-to-Peer Electronic Cash System"
 
 - Dec, 2013 Ethereum Whitepaper
