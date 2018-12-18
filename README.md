@@ -138,8 +138,10 @@ Introduction
 
       pragma solidity ^0.4.17
       
-      //Version of the compiler
-      //Contract will be valid for newer versions of Solidity
+      <!---
+      Version of the compiler
+      Contract will be valid for newer versions of Solidity
+      -->
       
       contract Inbox {
       
