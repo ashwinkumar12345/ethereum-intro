@@ -17,15 +17,15 @@ Introduction
 
 > ## What's Ethereum?
 
-- N/W of nodes
-- It's used to transfer money and store data
+- N/W of nodes (computers)
+- Used to transfer money and store data
 - Anyone can download an Ethereum client and run a node
 - Each node has a complete copy of the blockchain
 
 > ## Interfacing with Ethereum
 
 - For Developers: web3.js
-- For Consumers: Metamask or Mist Browser
+- For Consumers: Metamask (chrome extensiomn) or Mist Browser
 
 > ## Metamask Setup
 
@@ -33,9 +33,9 @@ Introduction
 - Create a username and password
 - Copy your 12-word mnemonic 
 
-> ## Metamask N/Ws
+> ## Ethereum N/Ws
 
-- Main
+- Main (productions apps and where ether has value)
 - Ropsten
 - Kovan
 - Rinkeby
@@ -45,7 +45,7 @@ Introduction
 > ## Ethereum Accounts
 
 - Your account consists of your account address, your public key, and your private key
-- Account address is like your email address
+- Account address is similar to your email address
 - Public and private keys together form your password
 - These are hex numbers, once converted to base10 => 8 x 10^79 (incomprehensibly large, cannot be guessed)
 
@@ -91,7 +91,7 @@ Introduction
 > ## Blockchain
   
 - Series of blocks, each connected to the previous
-- "Previous hash" is the hash of the previous block
+- 'Previous hash' is the hash of the previous block
 - If you need to change the data in one block, you would have to mine all subsequent blocks
 - This is how a blockchain resists change
 
@@ -99,7 +99,7 @@ Introduction
 
 - Peer A: Block 1 -> Block 2 ...
 - Peer B: Block 1 -> Block 2 ...
-- For a change to be propagated it needs to be accepted by majority of the peers
+- For a change to be propagated it needs to be accepted by the majority of the peers
 
 > ## Blocktime
 
@@ -111,7 +111,7 @@ Introduction
  
  - Is an account controlled by code:
    - balance - Amount of ether this account holds
-   - storage - Data store for this account
+   - storage - Actual data stored in this account
    - code - Raw machine byte code for this contract
   
 > ## Deploying a Smart Contract to Ethereum
@@ -149,7 +149,7 @@ Introduction
           string public message;
           
       //string is the datatype
-      //public means the variable can be called by anyone
+      //public means that the variable can be called by anyone
       //message is the name of the storage variable
       //The value of message is stored on the blockchain
       
@@ -158,8 +158,8 @@ Introduction
       //Inbox is a constructor function
       //Contructor function is automatically called when the contract is deployed
       //public means that the function can be called by anyone
-      //Function Types: public, private (only the contract can call this function), view (returns data but does not modify),
-      //pure (does not return or modify data), payable (send some ether along)
+      //Function types: public, private (only the contract can call this function), view (returns data but does not modify),
+      //pure (does not return or modify data), payable (sends some ether along)
       
               message = initialMessage;
           }
@@ -171,24 +171,24 @@ Introduction
 > ## Testing with Remix
 
 - Remix hosts an Ethereum N/W to simulate running the contract
-- Click "Create (string initialMessage)", after adding any initial message 
-- Once created, click message to retrieve that initial message 
-- Click "setMessage (string setMessage)", after adding a new message
-- Once created, click message to retrieve the new message
+- Click `Create (string initialMessage)`, after adding any initial message 
+- Once created, click `message` to retrieve that initial message 
+- Click `setMessage (string setMessage)`, after adding a new message
+- Once created, click `message` to retrieve the new message
 
 > ## Behind the scenes deployment
 
 - The contract creates a transaction object with the following info:
- - nonce - Number of times a sender has sent a transction
+ - nonce - Number of times the sender has sent a transction
  - to - Always blank for a contract
  - data - Bytecode
  - gasPrice - Amount of ether per transaction
  - startGas - Units of Gas
- - v, r, s - Cryptographic elements - Creates public and private keys from your Account address, the reverse is not possible
+ - v, r, s - Cryptographic elements - Creates public and private keys from your account address, the reverse is not possible
  
 > ## More on Functions
  
- - Whenever we want to modify any data on the N/W, a trans object is sent, which needs to be approved (mining)
+ - Whenever we want to modify any data on the N/W, a transaction object is sent, which needs to be approved (mining)
  - Calling a function - Get operation, free, instantaneous
  - Sending a transction to a function - Modify operation, costs ether, slow
  
