@@ -1,10 +1,5 @@
 # ethereum-intro
 
-- Intro - What's Ethereum?
-- App #1 - Interacting with Ethereum
-- App #2 - Tooling, Deployment, and Testing of Ethereum applications
-- App #3 - Multi-page Dapp on Ethereum
-
 > ## Table of Contents
 
 **[History](#history)**<br>
