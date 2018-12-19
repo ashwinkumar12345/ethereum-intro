@@ -8,7 +8,8 @@
 Introduction
 =============
 
-### Table of Contents
+> ## Table of Contents
+
 **[History](#history)**<br>
 **[What's Ethereum?](#whatsethereum)**<br>
 **[Interfacing with Ethereum](#interfacing)**<br>
@@ -17,6 +18,22 @@ Introduction
 **[Ethereum Accounts](#ethereumacc)**<br>
 **[Getting 'Free' Ether on Rinkeby](#freeether)**<br>
 **[Transaction Objects](#trans-object)**<br>
+**[Reason for the 15 sec delay for Transaction to Complete](#delay)**<br>
+**[Block](#block)**<br>
+**[Blockchain](#blockchain)**<br>
+**[Distributed Blockchain](#distributedblockchain)**<br>
+**[Blocktime](#blocktime)**<br>
+**[Smart Contract](#smartcontract)**<br>
+**[Deploying a Smart Contract to Ethereum](#deployingasmartcontract)**<br>
+**[Solidity Programming Language](#solidityprogramminglanguage)**<br>
+**[Solidity Compiler](#soliditycompiler)**<br>
+**[Remix Code Editor](#remixcodeeditor)**<br>
+**[Testing with Remix](#remix)**<br>
+**[Behind-the-Scenes Deployment](#behind-the-scenes-deployment)**<br>
+**[More on Functions](#moreonfunctions)**<br>
+**[Wei v/s Ether](#wei)**<br>
+**[Gas and Transactions](#gasandtransactions)**<br>
+**[Menomonic Phrase](#menomonic)**<br>
 
 <a name="history"></a>
 > ## History 
@@ -87,14 +104,14 @@ Introduction
   - r
   - s
 
-<a name="history"></a>
-> ## Reason for the 15 sec delay for transaction to complete
+<a name="delay"></a>
+> ## Reason for the 15 sec delay for Transaction to Complete
 
 - The transaction object is sent to one node on the Ethereum N/W
 - The node combines all transactions received at the same time into a list
 - The node then runs some 'validation logic' (mining) which causes the delay
 
-<a name="history"></a>
+<a name="block"></a>
 > ## Block
 
 - Data is represented by a Hash
@@ -108,7 +125,7 @@ Introduction
   - Hash
   - MINE (readjusts the nonce to calculate a specfic hash)
  
-<a name="history"></a>
+<a name="blockchain"></a>
 > ## Blockchain
   
 - Series of blocks, each connected to the previous
@@ -116,21 +133,21 @@ Introduction
 - If you need to change the data in one block, you would have to mine all subsequent blocks
 - This is how a blockchain resists change
 
-<a name="history"></a>
+<a name="distributedblockchain"></a>
 > ## Distributed Blockchain
 
 - Peer A: Block 1 -> Block 2 ...
 - Peer B: Block 1 -> Block 2 ...
 - For a change to be propagated it needs to be accepted by the majority of the peers
 
-<a name="history"></a>
+<a name="blocktime"></a>
 > ## Blocktime
 
 - You're looking for a hash less than some number, for example, 1000
 - Data + Nonce = Hash -> Base10 is this < 1000, if no, decrease 1000 to maintain blocktime at 15s
 - We need to vary 1000 because the number of nodes in the blockchain is always in flux
 
-<a name="history"></a>
+<a name="smartcontract"></a>
 > ## Smart Contract
  
  - Is an account controlled by code:
@@ -138,27 +155,27 @@ Introduction
    - storage - Actual data stored in this account
    - code - Raw machine byte code for this contract
 
-<a name="history"></a>
+<a name="deployingasmartcontract"></a>
 > ## Deploying a Smart Contract to Ethereum
 
 - Contract source is written on your laptop
 - This contract is deployed as a 'contract instance' to the Ethereum N/W
 
-<a name="history"></a>
+<a name="solidityprogramminglanguage"></a>
 > ## Solidity Programming Language
 
 - Written as .sol files
 - Strongly typed
 - Similar to Javascript
 
-<a name="history"></a>
+<a name="soliditycompiler"></a>
 > ## Solidity Compiler
 
 - A contract is compiled by the Solidity compiler into Bytecode and ABI (application binary interface)
 - Bytecode is deployed into Ethereum 
 - ABI is used for interfacing with a front-end application
 
-<a name="history"></a>
+<a name="remixcodeeditor"></a>
 > ## Remix Code Editor
 
 - Browser code editor used for testing smart contracts
@@ -196,7 +213,7 @@ Introduction
           }
       }
 
-<a name="history"></a>
+<a name="remix"></a>
 > ## Testing with Remix
 
 - Remix hosts an Ethereum N/W to simulate running the contract
@@ -205,8 +222,8 @@ Introduction
 - Click `setMessage (string setMessage)`, after adding a new message
 - Once created, click `message` to retrieve the new message
 
-<a name="history"></a>
-> ## Behind the scenes deployment
+<a name="behind-the-scenes-deployment"></a>
+> ## Behind-the-Scenes Deployment
 
 - The contract creates a transaction object with the following info:
  - nonce - Number of times the sender has sent a transction
@@ -216,28 +233,28 @@ Introduction
  - startGas - Units of Gas
  - v, r, s - Cryptographic elements - Creates public and private keys from your account address, the reverse is not possible
 
-<a name="history"></a>
+<a name="moreonfunctions"></a>
 > ## More on Functions
  
  - Whenever we want to modify any data on the N/W, a transaction object is sent, which needs to be approved (mining)
  - Calling a function - Get operation, free, instantaneous
  - Sending a transction to a function - Modify operation, costs ether, slow
 
-<a name="history"></a>
+<a name="wei"></a>
 > ## Wei v/s Ether
 
   - Wei is the smallest unit of currency
   - 1 Eth = 1,000,000,000,000,000,000 Wei
   - No fractional unit of Wei
 
-<a name="history"></a>
+<a name="gasandtransactions"></a>
 > ## Gas and Transactions
 
  - Different operations have different gas costs
  - gasPrice - Amount of Wei per unit of gas
  - startGas - Total amount of Wei you are willing to spend (safety net)
 
-<a name="history"></a>
+<a name="menomonic"></a>
 > ## Menomonic Phrase
 
  - 12-word phrase that allows you to generate the pub and priv key
