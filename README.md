@@ -5,9 +5,6 @@
 - App #2 - Tooling, Deployment, and Testing of Ethereum applications
 - App #3 - Multi-page Dapp on Ethereum
 
-Introduction
-=============
-
 > ## Table of Contents
 
 **[History](#history)**<br>
