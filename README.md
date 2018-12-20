@@ -219,12 +219,12 @@
 > ## Behind-the-Scenes Deployment
 
 - The contract creates a transaction object with the following info:
- - nonce - Number of times the sender has sent a transction
- - to - Always blank for a contract
- - data - Bytecode
- - gasPrice - Amount of ether per transaction
- - startGas - Units of Gas
- - v, r, s - Cryptographic elements - Creates public and private keys from your account address, the reverse is not possible
+  - nonce - Number of times the sender has sent a transction
+  - to - Always blank for a contract
+  - data - Bytecode
+  - gasPrice - Amount of ether per transaction
+  - startGas - Units of Gas
+  - v, r, s - Cryptographic elements - Creates public and private keys from your account address, the reverse is not possible
 
 <a name="moreonfunctions"></a>
 > ## More on Functions
