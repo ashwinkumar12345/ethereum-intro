@@ -1,6 +1,6 @@
 # ethereum-intro
 
-> ## Table of Contents
+> ## Contents
 
 **[History](#history)**<br>
 **[What's Ethereum?](#whatsethereum)**<br>
