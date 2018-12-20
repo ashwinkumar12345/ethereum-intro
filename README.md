@@ -25,7 +25,7 @@
 **[More on Functions](#moreonfunctions)**<br>
 **[Wei v/s Ether](#wei)**<br>
 **[Gas and Transactions](#gasandtransactions)**<br>
-**[Menomonic Phrase](#menomonic)**<br>
+**[Mneomonic Phrase](#mneomonic)**<br>
 
 <a name="history"></a>
 > ## History 
@@ -246,8 +246,8 @@
  - gasPrice - Amount of Wei per unit of gas
  - startGas - Total amount of Wei you are willing to spend (safety net)
 
-<a name="menomonic"></a>
-> ## Menomonic Phrase
+<a name="mneomonic"></a>
+> ## Mneomonic Phrase
 
  - 12-word phrase that allows you to generate the pub and priv key
  - 12-word menomonic -> BIP39 Algo -> Account address (Pub key and Priv key)
