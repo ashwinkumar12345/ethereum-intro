@@ -102,6 +102,7 @@
 - The transaction object is sent to one node on the Ethereum N/W
 - The node combines all transactions received at the same time into a list
 - The node then runs some 'validation logic' (mining) which causes the delay
+- Result needs to be propagated across all nodes
 
 <a name="block"></a>
 > ## Block
