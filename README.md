@@ -47,7 +47,7 @@
 > ## Interfacing with Ethereum
 
 - For Developers: web3.js
-- For Consumers: Metamask (chrome extensiomn) or Mist Browser
+- For Consumers: Metamask (chrome extension) or Mist Browser
 
 <a name="metamasksetup"></a>
 > ## Metamask Setup
