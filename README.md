@@ -80,6 +80,8 @@
 - Public and private keys together form your password
 - These are hex numbers, once converted to base10 => 8 x 10^79 (incomprehensibly large, cannot be guessed)
 
+![intro-3](https://user-images.githubusercontent.com/4720428/50611521-9e43d780-0e8b-11e9-8280-74d39ab688d2.png)
+
 <a name="freeether"></a>
 > ## Getting 'Free' Ether on Rinkeby
 
