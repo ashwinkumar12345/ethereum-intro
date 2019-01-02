@@ -53,6 +53,8 @@
 - For Developers: web3.js
 - For Consumers: Metamask (chrome extension) or Mist Browser
 
+![intro-2](https://user-images.githubusercontent.com/4720428/50611167-4f497280-0e8a-11e9-8180-dac65c2a1bdf.png)
+
 <a name="metamasksetup"></a>
 > ## Metamask Setup
 
