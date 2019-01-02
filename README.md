@@ -40,6 +40,9 @@
 > ## What's Ethereum?
 
 - Network of nodes (computers)
+
+![intro-1](https://user-images.githubusercontent.com/4720428/50610712-cf6ed880-0e88-11e9-9344-03a3f4aaa84f.png)
+
 - Used to transfer money and store data
 - Anyone can download an Ethereum client and run a node
 - Each node has a complete copy of the blockchain
