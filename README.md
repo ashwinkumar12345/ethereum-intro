@@ -30,15 +30,16 @@
 <a name="history"></a>
 > ## History 
 - Oct 31st, 2008 Bitcoin Whitepaper
-"Bitcoin: A Peer-to-Peer Electronic Cash System"
+"Bitcoin: A Peer-to-Peer Electronic Cash System" 
+(https://bitcoin.org/bitcoin.pdf)
 
 - Dec, 2013 Ethereum Whitepaper
-"Ethereum: The Ultimate Smart Contract and Decentralized Application Platform"
+"Ethereum: The Ultimate Smart Contract and Decentralized Application Platform" (http://web.archive.org/web/20131228111141/http://vbuterin.com/ethereum.html)
 
 <a name="whatsethereum"></a>
 > ## What's Ethereum?
 
-- N/W of nodes (computers)
+- Network of nodes (computers)
 - Used to transfer money and store data
 - Anyone can download an Ethereum client and run a node
 - Each node has a complete copy of the blockchain
