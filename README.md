@@ -5,27 +5,27 @@
 **[History](#history)**<br>
 **[What's Ethereum?](#whatsethereum)**<br>
 **[Interfacing with Ethereum](#interfacing)**<br>
-**[Metamask Setup](#metamasksetup)**<br>
-**[Ethereum Networks](#ethereumnet)**<br>
-**[Ethereum Accounts](#ethereumacc)**<br>
-**[Getting 'Free' Ether on Rinkeby](#freeether)**<br>
-**[Transaction Objects](#trans-object)**<br>
-**[Reason for the 15 sec delay for Transaction to Complete](#delay)**<br>
+**[Metamask setup](#metamasksetup)**<br>
+**[Ethereum networks](#ethereumnet)**<br>
+**[Ethereum accounts](#ethereumacc)**<br>
+**[Getting 'free' ether on rinkeby](#freeether)**<br>
+**[Transaction objects](#trans-object)**<br>
+**[Reason for the 15 sec delay for transaction to complete](#delay)**<br>
 **[Block](#block)**<br>
 **[Blockchain](#blockchain)**<br>
 **[Distributed Blockchain](#distributedblockchain)**<br>
 **[Blocktime](#blocktime)**<br>
-**[Smart Contract](#smartcontract)**<br>
-**[Deploying a Smart Contract to Ethereum](#deployingasmartcontract)**<br>
-**[Solidity Programming Language](#solidityprogramminglanguage)**<br>
-**[Solidity Compiler](#soliditycompiler)**<br>
-**[Remix Code Editor](#remixcodeeditor)**<br>
-**[Testing with Remix](#remix)**<br>
-**[Behind-the-Scenes Deployment](#behind-the-scenes-deployment)**<br>
-**[More on Functions](#moreonfunctions)**<br>
+**[Smart contract](#smartcontract)**<br>
+**[Deploying a smart contract to Ethereum](#deployingasmartcontract)**<br>
+**[Solidity (programming language)](#solidityprogramminglanguage)**<br>
+**[Solidity compiler](#soliditycompiler)**<br>
+**[Remix code editor](#remixcodeeditor)**<br>
+**[Testing with remix](#remix)**<br>
+**[Behind-the-Scenes deployment](#behind-the-scenes-deployment)**<br>
+**[More on functions](#moreonfunctions)**<br>
 **[Wei v/s Ether](#wei)**<br>
-**[Gas and Transactions](#gasandtransactions)**<br>
-**[Mneomonic Phrase](#mneomonic)**<br>
+**[Gas and transactions](#gasandtransactions)**<br>
+**[Mneomonic phrase](#mneomonic)**<br>
 
 <a name="history"></a>
 > ## History 
@@ -48,8 +48,8 @@ It's used to transfer money and store data. Anyone can download an Ethereum clie
 <a name="interfacing"></a>
 > ## Interfacing with Ethereum
 
-For Developers: web3.js
-For Consumers: Metamask (chrome extension) or Mist Browser
+- For Developers: web3.js
+- For Consumers: Metamask (chrome extension) or Mist Browser
 
 ![intro-2](https://user-images.githubusercontent.com/4720428/50611167-4f497280-0e8a-11e9-8180-dac65c2a1bdf.png)
 
@@ -82,12 +82,13 @@ Public and private keys together form your password. These are hex numbers, once
 <a name="freeether"></a>
 > ## Getting 'Free' ether on rinkeby
 
-Go to faucet.rinkeby.io and follow the steps. Ether has real value only on the main network. Receiving ether takes a certain amount of time (around 15 to 20 seconds)
+Go to `faucet.rinkeby.io` and follow the steps. 
+Ether has real value only on the main network. Receiving ether takes a certain amount of time (around 15 to 20 seconds).
 
 <a name="trans-object"></a>
 > ## Transaction Objects
 
-Your account address is sent to a backend node.js server. The server uses web3.js to create a transaction object
+Your account address is sent to a backend node.js server. The server uses web3.js to create a transaction object.
 The transaction object consists of:
 
  - nonce
@@ -126,7 +127,7 @@ Series of blocks, each connected to the previous. 'Previous hash' is the hash of
 <a name="distributedblockchain"></a>
 > ## Distributed Blockchain
 
-For a change to be propagated it needs to be accepted by the majority of the peers
+For a change to be propagated it needs to be accepted by the majority of the peers.
 
 - Peer A: Block 1 -> Block 2 ...
 - Peer B: Block 1 -> Block 2 ...
@@ -155,7 +156,7 @@ The contract source is written on your laptop. This contract is then deployed as
 <a name="solidityprogramminglanguage"></a>
 > ## Solidity (programming language)
 
-It's written as .sol files. It's a strongly typed language, similar to Javascript. 
+It's written as `.sol` files. It's a strongly typed language, similar to Javascript. 
 
 <a name="soliditycompiler"></a>
 > ## Solidity compiler
@@ -205,7 +206,7 @@ A sample contract is as follows:
 <a name="remix"></a>
 > ## Testing with remix
 
-Remix hosts an Ethereum N/W to simulate running the contract.
+Remix hosts an Ethereum network to simulate running the contract.
 
 - Click `Create (string initialMessage)`, after adding any initial message. 
 - Once created, click `message` to retrieve that initial message. 
@@ -222,7 +223,7 @@ The contract creates a transaction object with the following info:
  - data - Bytecode
  - gasPrice - Amount of ether per transaction
  - startGas - Units of Gas
- - v, r, s - Cryptographic elements - Creates public and private keys from your account address, the reverse is not possible
+ - v, r, s - Cryptographic elements - creates public and private keys from your account address, the reverse is not possible
 
 <a name="moreonfunctions"></a>
 > ## More on Functions
