@@ -29,96 +29,88 @@
 
 <a name="history"></a>
 > ## History 
-- Oct 31st, 2008 Bitcoin Whitepaper
+Oct 31st, 2008 Bitcoin Whitepaper
 "Bitcoin: A Peer-to-Peer Electronic Cash System" 
 (https://bitcoin.org/bitcoin.pdf)
 
-- Dec, 2013 Ethereum Whitepaper
+Dec, 2013 Ethereum Whitepaper
 "Ethereum: The Ultimate Smart Contract and Decentralized Application Platform" (http://web.archive.org/web/20131228111141/http://vbuterin.com/ethereum.html)
 
 <a name="whatsethereum"></a>
 > ## What's Ethereum?
 
-- Network of nodes (computers)
+- Network of nodes (computers):
 
 ![intro-1](https://user-images.githubusercontent.com/4720428/50610712-cf6ed880-0e88-11e9-9344-03a3f4aaa84f.png)
 
-- Used to transfer money and store data
-- Anyone can download an Ethereum client and run a node
-- Each node has a complete copy of the blockchain
+It's used to transfer money and store data. Anyone can download an Ethereum client and run a node. Each node has a complete copy of the blockchain.
 
 <a name="interfacing"></a>
 > ## Interfacing with Ethereum
 
-- For Developers: web3.js
-- For Consumers: Metamask (chrome extension) or Mist Browser
+For Developers: web3.js
+For Consumers: Metamask (chrome extension) or Mist Browser
 
 ![intro-2](https://user-images.githubusercontent.com/4720428/50611167-4f497280-0e8a-11e9-8180-dac65c2a1bdf.png)
 
 <a name="metamasksetup"></a>
 > ## Metamask Setup
 
-- Go to Chrome Webstore and install the Metmask plugin
-- Create a username and password
-- Copy your 12-word mnemonic 
+- Go to Chrome Webstore and install the Metmask plugin.
+- Create a username and password.
+- Copy your 12-word mnemonic.
 
 <a name="ethereumnet"></a>
-> ## Ethereum Networks
+> ## Ethereum networks
 
-- Main (productions apps and where ether has value)
-- Ropsten
-- Kovan
-- Rinkeby
-- localhost
-- Custom RPC
+Main (productions apps and where ether has value)
+Ropsten
+Kovan
+Rinkeby
+localhost
+Custom RPC
 
 <a name="ethereumacc"></a>
 > ## Ethereum Accounts
 
-- Your account consists of your account address, your public key, and your private key
-- Account address is similar to your email address
-- Public and private keys together form your password
-- These are hex numbers, once converted to base10 => 8 x 10^79 (incomprehensibly large, cannot be guessed)
+Your account consists of your account address, your public key, and your private key. Account address is similar to your email address. 
+
+Public and private keys together form your password. These are hex numbers, once converted to base10 => 8 x 10^79 (incomprehensibly large, cannot be guessed)
 
 ![intro-3](https://user-images.githubusercontent.com/4720428/50611521-9e43d780-0e8b-11e9-8280-74d39ab688d2.png)
 
 <a name="freeether"></a>
-> ## Getting 'Free' Ether on Rinkeby
+> ## Getting 'Free' ether on rinkeby
 
-- Go to faucet.rinkeby.io and follow the steps
-- Ether has real value only on the main network
-- Receiving ether takes a certain amount of time (around 15 to 20 seconds)
+Go to faucet.rinkeby.io and follow the steps. Ether has real value only on the main network. Receiving ether takes a certain amount of time (around 15 to 20 seconds)
 
 <a name="trans-object"></a>
 > ## Transaction Objects
 
-- Your account address is sent to a backend node.js server
-- The server uses web3.js to create a transaction object
-- The transaction object consists of:
-  - nonce
-  - to 
-  - value
-  - gasprice
-  - gasLimit (startGas)
-  - v
-  - r
-  - s
+Your account address is sent to a backend node.js server. The server uses web3.js to create a transaction object
+The transaction object consists of:
+
+ - nonce
+ - to 
+ - value
+ - gasprice
+ - gasLimit (startGas)
+ - v
+ - r
+ - s
 
 <a name="delay"></a>
-> ## Reason for the 15 sec delay for Transaction to Complete
+> ## Reason for the 15 sec delay for transaction to complete
 
-- The transaction object is sent to one node on the Ethereum N/W
-- The node combines all transactions received at the same time into a list
-- The node then runs some 'validation logic' (mining) which causes the delay
-- Result needs to be propagated across all nodes
+The transaction object is sent to one node on the Ethereum network. The node combines all transactions received at the same time into a list. The node then runs some 'validation logic' (mining) which causes the delay as the result needs to be propagated across all the nodes.
 
 <a name="block"></a>
 > ## Block
 
-- Data is represented by a Hash
-- Hash is a digital fingerprint of the data
-- It's calculated by the proof-of-work algorithm
-- Block consists of:
+Data is represented by a Hash. Hash is a digital fingerprint of the data. It's calculated by the proof-of-work algorithm.
+
+Block consists of:
+
   - Block Number
   - Nonce
   - Data
@@ -129,58 +121,54 @@
 <a name="blockchain"></a>
 > ## Blockchain
   
-- Series of blocks, each connected to the previous
-- 'Previous hash' is the hash of the previous block
-- If you need to change the data in one block, you would have to mine all subsequent blocks
-- This is how a blockchain resists change
+Series of blocks, each connected to the previous. 'Previous hash' is the hash of the previous block. If you need to change the data in one block, you would have to mine all subsequent blocks. This is how a blockchain resists change.
 
 <a name="distributedblockchain"></a>
 > ## Distributed Blockchain
 
+For a change to be propagated it needs to be accepted by the majority of the peers
+
 - Peer A: Block 1 -> Block 2 ...
 - Peer B: Block 1 -> Block 2 ...
-- For a change to be propagated it needs to be accepted by the majority of the peers
 
 <a name="blocktime"></a>
 > ## Blocktime
 
-- You're looking for a hash less than some number, for example, 1000
-- Data + Nonce = Hash -> Base10 is this < 1000, if no, decrease 1000 to maintain blocktime at 15s
-- We need to vary 1000 because the number of nodes in the blockchain is always in flux
+You're looking for a hash less than some number, for example, 1000.
+Data + Nonce = Hash -> Base10 is this < 1000, if no, decrease 1000 to maintain blocktime at 15s.
+We need to vary 1000 because the number of nodes in the blockchain is always in flux.
 
 <a name="smartcontract"></a>
 > ## Smart Contract
  
- - Is an account controlled by code:
-   - balance - Amount of ether this account holds
-   - storage - Actual data stored in this account
-   - code - Raw machine byte code for this contract
+It's an account controlled by code:
+
+ - balance - Amount of ether this account holds
+ - storage - Actual data stored in this account
+ - code - Raw machine byte code for this contract
 
 <a name="deployingasmartcontract"></a>
-> ## Deploying a Smart Contract to Ethereum
+> ## Deploying a smart contract to Ethereum
 
-- Contract source is written on your laptop
-- This contract is deployed as a 'contract instance' to the Ethereum N/W
+The contract source is written on your laptop. This contract is then deployed as a 'contract instance' to the Ethereum network.
 
 <a name="solidityprogramminglanguage"></a>
-> ## Solidity Programming Language
+> ## Solidity (programming language)
 
-- Written as .sol files
-- Strongly typed
-- Similar to Javascript
+It's written as .sol files. It's a strongly typed language, similar to Javascript. 
 
 <a name="soliditycompiler"></a>
-> ## Solidity Compiler
+> ## Solidity compiler
 
-- A contract is compiled by the Solidity compiler into Bytecode and ABI (application binary interface)
-- Bytecode is deployed into Ethereum 
-- ABI is used for interfacing with a front-end application
+A contract is compiled by the Solidity compiler into bytecode and ABI (application binary interface).
+The bytecode is deployed into Ethereum. 
+ABI is used for interfacing with a front-end application.
 
 <a name="remixcodeeditor"></a>
-> ## Remix Code Editor
+> ## Remix code editor
 
-- Browser code editor used for testing smart contracts
-- A sample contract is as follows:
+It's a browser code editor used for testing smart contracts.
+A sample contract is as follows:
 
       pragma solidity ^0.4.17
      
@@ -215,51 +203,55 @@
       }
 
 <a name="remix"></a>
-> ## Testing with Remix
+> ## Testing with remix
 
-- Remix hosts an Ethereum N/W to simulate running the contract
-- Click `Create (string initialMessage)`, after adding any initial message 
-- Once created, click `message` to retrieve that initial message 
-- Click `setMessage (string setMessage)`, after adding a new message
-- Once created, click `message` to retrieve the new message
+Remix hosts an Ethereum N/W to simulate running the contract.
+
+- Click `Create (string initialMessage)`, after adding any initial message. 
+- Once created, click `message` to retrieve that initial message. 
+- Click `setMessage (string setMessage)`, after adding a new message.
+- Once created, click `message` to retrieve the new message.
 
 <a name="behind-the-scenes-deployment"></a>
-> ## Behind-the-Scenes Deployment
+> ## Behind-the-Scenes deployment
 
-- The contract creates a transaction object with the following info:
-  - nonce - Number of times the sender has sent a transction
-  - to - Always blank for a contract
-  - data - Bytecode
-  - gasPrice - Amount of ether per transaction
-  - startGas - Units of Gas
-  - v, r, s - Cryptographic elements - Creates public and private keys from your account address, the reverse is not possible
+The contract creates a transaction object with the following info:
+
+ - nonce - Number of times the sender has sent a transction
+ - to - Always blank for a contract
+ - data - Bytecode
+ - gasPrice - Amount of ether per transaction
+ - startGas - Units of Gas
+ - v, r, s - Cryptographic elements - Creates public and private keys from your account address, the reverse is not possible
 
 <a name="moreonfunctions"></a>
 > ## More on Functions
  
- - Whenever we want to modify any data on the N/W, a transaction object is sent, which needs to be approved (mining)
- - Calling a function - Get operation, free, instantaneous
- - Sending a transction to a function - Modify operation, costs ether, slow
+Whenever we want to modify any data on the network, a transaction object is sent, which needs to be approved (mining).
+
+- Calling a function - Get operation, free, instantaneous
+- Sending a transction to a function - Modify operation, costs ether, slow
 
 <a name="wei"></a>
 > ## Wei v/s Ether
 
-  - Wei is the smallest unit of currency
-  - 1 Eth = 1,000,000,000,000,000,000 Wei
-  - No fractional unit of Wei
+Wei is the smallest unit of currency.
+1 Eth = 1,000,000,000,000,000,000 Wei.
+There is no fractional unit of Wei.
 
 <a name="gasandtransactions"></a>
 > ## Gas and Transactions
 
- - Different operations have different gas costs
- - gasPrice - Amount of Wei per unit of gas
- - startGas - Total amount of Wei you are willing to spend (safety net)
+Different operations have different gas costs:
+
+ - gasPrice - Amount of Wei per unit of gas.
+ - startGas - Total amount of Wei you are willing to spend (safety net).
 
 <a name="mneomonic"></a>
 > ## Mneomonic Phrase
 
- - 12-word phrase that allows you to generate the pub and priv key
- - 12-word menomonic -> BIP39 Algo -> Account address (Pub key and Priv key)
+12-word phrase that allows you to generate the pub and priv key
+12-word menomonic -> BIP39 Algo -> Account address (Pub key and Priv key)
 
 
 
